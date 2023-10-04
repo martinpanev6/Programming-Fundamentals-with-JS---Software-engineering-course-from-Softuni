@@ -1,13 +1,14 @@
 function condenseArrToNum(arr) {
-    let conArr = [];
-    let sum = 0;
-    
-    for(let i = 0; i < arr.length - 1; i++){
-        conArr[i] = arr[i] + arr[i + 1];
-        conArr.push(conArr[i]);
-        conArr.length = arr.length - 1;
+    while (arr.length > 1) {
+        let condensed = [];
+        condensed.length = arr.length - 1;
+        for (let i = 0; i < arr.length - 1; i++) {
+            condensed[i] = arr[i] + arr[i + 1];
+
+        }
+        arr = condensed;
     }
-    console.log(conArr);
+    console.log(arr[0]);
 }
 
 //condenseArrToNum([2,10,3]);
