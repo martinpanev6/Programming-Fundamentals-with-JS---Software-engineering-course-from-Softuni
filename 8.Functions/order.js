@@ -14,6 +14,7 @@ function order(product, quantity) {
             price = quantity * 2.00;
             break;
     }
+    console.log(price.toFixed(2));
 }
 
 order('coke', 10);
