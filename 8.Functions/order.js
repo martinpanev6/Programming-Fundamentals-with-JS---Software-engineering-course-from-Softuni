@@ -14,7 +14,6 @@ function order(product, quantity) {
             price = quantity * 2.00;
             break;
     }
-    console.log(price);
 }
 
 order('coke', 10);
