@@ -1,29 +1,37 @@
 function arrModifier(arr) {
+    
     let array = arr.shift().split(' ').map(Number);
     let end = arr.pop();
-    for(let el of arr){
+
+    for (let el of arr) {
+        
         let tokens = el.split(' ');
         let action = tokens.shift();
-        if(action == 'swap'){
+        
+        if (action == 'swap') {
             let idx1 = Number(tokens.shift());
             let idx2 = Number(tokens.shift());
             let first = array[idx1];
             let second = array[idx2];
             array[idx1] = second;
             array[idx2] = first;
-        }else if(action == 'multiply'){
+        } else if (action == 'multiply') {
             let idx1 = Number(tokens.shift());
             let idx2 = Number(tokens.shift());
             let first = array[idx1];
             let second = array[idx2];
             let multiplied = first * second;
             array[idx1] = multiplied;
-        }else if(action == 'decrease'){
-            for(let i = 0; i < array.length; i++){
+        } else if (action == 'decrease') {
+            
+            for (let i = 0; i < array.length; i++) {
                 array[i] -= 1
             }
+
         }
+
     }
+    
     console.log(array.join(', '));
 }
 
