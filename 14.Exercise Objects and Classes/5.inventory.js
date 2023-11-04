@@ -6,9 +6,11 @@ function inventory(arr){
  
         let heroObj = {
             hero: heroName,
-            level: Number(level),
-            items: items ? items : []
+            level: Number(level)
         };
+        if(items.length > 1){
+            heroObj.items = items; 
+        }
  
         heroDataObj[heroName] = heroObj;
     }
