@@ -1,8 +1,9 @@
 function splitAndJoinPascalCase(input) {
-    const words = input.replace(/([a-z])([A-Z])/g, '$1 $2').split(' ');
-    const result = words.join(', ');
-
-    console.log(result);
+    let pattern = /[A-Z][a-z]*/gm;
+    let mach = input.match(pattern);
+    if(mach){
+    console.log(mach.join(', '));
+    }
 }
 
 splitAndJoinPascalCase('SplitMeIfYouCanHaHaYouCantOrYouCan');
