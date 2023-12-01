@@ -38,10 +38,10 @@ function heroesOfCode(arr){
                 hero.mp += mpToRestore;
                 console.log(`${name} recharged for ${mpToRestore} MP!`);
                 break;
-            case 'Castspell':
+            case 'CastSpell':
                 let mpCost = Number(tokens[2]);
                 let spellName = tokens[3];
-                if(hero.hp >= mpCost){
+                if(hero.mp >= mpCost){
                     hero.mp -= mpCost;
                     console.log(`${name} has successfully cast ${spellName} and now has ${hero.mp} MP!`);
                 }else{
